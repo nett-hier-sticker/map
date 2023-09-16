@@ -36,8 +36,15 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
   <main id="main">
     <div id="map"></div>
     <div id="action_pane">
-      <div class="add_button"></div>
-      <div class="marker_info"></div>
+      <div class="marker_info">
+        <h1 id="marker_info_id">Please choose a sticker</h1>
+      </div>
+      <div class="add_button">
+        + Add Sticker Location
+      </div>
+      <div class="not_official_note">
+        This is not an official map but a community project. <br> You can get the official stickers <a href="https://shop.thelaend.de/faenartikel/" target="_blank">here</a> for free if you live in Germany.
+      </div>
     </div>
   </main>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
