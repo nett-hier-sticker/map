@@ -19,12 +19,17 @@ function chooseTracking(allow) {
     // Set acceptTracking variable
     acceptTracking = allow;
 
+    // No Tracking change
+    if (allow == "n") for (matomo_scripts of document.getElementsByClassName("matomo")) matomo_scripts.remove();
+    if (allow == "n") for (matomo_scripts of document.getElementsByTagName("script")) if (matomo_scripts.src.indexOf("analytics") != -1) matomo_scripts.remove();
+
     // 
     // Tracking
     // 
     if (allow != "y") return;
     var matomo = document.createElement("script");
     matomo.type = "text/javascript";
+    matomo.classList.add("matomo");
     matomo.innerHTML = "var _paq = window._paq = window._paq || [];_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function() {var u=\"//analytics.kondev.de/\";_paq.push(['setTrackerUrl', u+'matomo.php']);_paq.push(['setSiteId', '1']);var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);})();";
     document.head.appendChild(matomo);
 }

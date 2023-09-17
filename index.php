@@ -78,6 +78,10 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
       </div>
     </div>
   </main>
+  <div id="action_buttons">
+    <div class="cookie_opener" onclick='document.getElementById("cookie_notice").style.display = "grid";'>🍪</div>
+    <div class="map_provider_opener" onclick="showMapProviderSelection()">🌍</div>
+  </div>
   <div class="overlay" id="map_provider_selection">
     <div>
       <div class="map_provider_selector" id="map_provider_selector_cartodb" onclick="setMapProvider('cartodb')">
