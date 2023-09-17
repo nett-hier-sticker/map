@@ -78,6 +78,43 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
       </div>
     </div>
   </main>
+  <div class="overlay" id="map_provider_selection">
+    <div>
+      <div class="map_provider_selector" id="map_provider_selector_cartodb" onclick="setMapProvider('cartodb')">
+        <div class="map_provider_selector-image">
+          <img src="/images/mapProviders/cartodb_voyager.png" alt="CartoDB Voyager">
+        </div>
+        <p>
+          CartoDB Voyager
+        </p>
+      </div>
+      <div class="map_provider_selector" id="map_provider_selector_esri" onclick="setMapProvider('esri')">
+        <div class="map_provider_selector-image">
+          <img src="/images/mapProviders/esri_natgeo.png" alt="Esri NatGeo">
+        </div>
+        <p>
+          Esri NatGeo
+        </p>
+      </div>
+      <div class="map_provider_selector active" id="map_provider_selector_osm" onclick="setMapProvider('osm')">
+        <div class="map_provider_selector-image">
+          <img src="/images/mapProviders/osm.png" alt="OpenStreetMap">
+        </div>
+        <p>
+          OpenStreetMap
+        </p>
+      </div>
+      <div class="map_provider_selector" id="map_provider_selector_usgs" onclick="setMapProvider('usgs')">
+        <div class="map_provider_selector-image">
+          <img src="/images/mapProviders/usgs_usimagery.png" alt="USGS US Imagery">
+        </div>
+        <p>
+          USGS US Imagery
+        </p>
+      </div>
+      <button onclick="hideMapProviderSelection()">Close</button>
+    </div>
+  </div>
   <script src="leaflet.js"></script>
   <script src="map.js"></script>
   <script src="cookie-banner.js"></script>
