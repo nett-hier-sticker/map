@@ -61,7 +61,7 @@ if (document.cookie.indexOf("mapProvider") != -1) {
             break;
     }
     loadMap();
-}
+} else loadMap("osm");
 
 let marker = null;
 
