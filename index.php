@@ -39,7 +39,7 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
       <div class="marker_info">
         <h1 id="marker_info_id">Please choose a sticker</h1>
       </div>
-      <div class="add_button">
+      <div class="add_button" onclick="location.assign('/add-sticker')">
         + Add Sticker Location
       </div>
       <div class="not_official_note">
