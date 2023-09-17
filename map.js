@@ -1,5 +1,9 @@
 // Create map Centered on Stuttgart
-var map = L.map("map").setView([48.778026, 9.179764], 8);
+var map = L.map("map", {
+    'worldCopyJump': true,
+    center: [48.778026, 9.179764],
+    zoom: 8
+});
 
 var netthier_laend = L.icon({
     iconUrl: '/images/markers/netthier_laend.png',
