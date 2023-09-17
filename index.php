@@ -27,7 +27,7 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Nett-Hier-Sticker Map</title>
+  <title>Map | Nett-Hier-Sticker</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="smallscreen.css">
   <link rel="stylesheet" href="leaflet.css" />
