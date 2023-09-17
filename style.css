@@ -91,6 +91,19 @@ main {
     font-size: 0.75rem;
 }
 
+.action_pane_smallscreen_close {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.smallscreen_add_button {
+    display: none;
+}
+
 /* 
 Cookie notice 
 */

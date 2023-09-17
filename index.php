@@ -26,9 +26,10 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Nett-Hier-Sticker Map</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="smallscreen.css">
   <link rel="stylesheet" href="leaflet.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32x32.png">
@@ -40,6 +41,7 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
   <meta name="msapplication-TileImage" content="/images/logo/mstile-144x144.png">
   <meta name="msapplication-config" content="/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
@@ -76,11 +78,13 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
       <div class="not_official_note">
         This is not an official map but a community project. <br> You can get the official stickers <a href="https://shop.thelaend.de/faenartikel/" target="_blank">here</a> for free if you live in Germany.
       </div>
+      <div class="action_pane_smallscreen_close" onclick="closeActionPane()">&xotime;</div>
     </div>
   </main>
   <div id="action_buttons">
     <div class="cookie_opener" onclick='document.getElementById("cookie_notice").style.display = "grid";'>🍪</div>
     <div class="map_provider_opener" onclick="showMapProviderSelection()">🌍</div>
+    <div class="smallscreen_add_button" onclick="location.assign('/add-sticker')">📌</div>
   </div>
   <div class="overlay" id="map_provider_selection">
     <div>

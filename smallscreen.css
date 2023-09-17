@@ -1,0 +1,35 @@
+@media screen and (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "map";
+    }
+
+    #action_pane {
+        display: none;
+        grid-area: map;
+        z-index: 10;
+        background-color: #fff;
+        grid-template-rows: 500px 1fr min-content;
+        gap: 0;
+        grid-template-areas:
+            "marker_info      "
+            ".                "
+            "not_official_note";
+    }
+
+    .action_pane_smallscreen_close {
+        display: block;
+    }
+
+    .add_button {
+        display: none;
+    }
+
+    .smallscreen_add_button {
+        display: block;
+    }
+}
