@@ -8,6 +8,7 @@
     />
     <title>Add sticker | Nett-Hier-Sticker</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/leaflet.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -43,50 +44,21 @@
   <body>
     <header>
       <h1>Add a sticker</h1>
-      <h2>Please choose the sticker Type</h2>
+      <h2>Please choose the location</h2>
+      <p>
+        You can set the marker by clicking on the map, then you can drag it
+        around for fine positioning.
+      </p>
     </header>
-    <main id="choose_sticker_type">
-      <div
-        class="sticker_type laendshape"
-        onclick="chooseSticker('laendshape')"
-      >
-        <div class="sticker_type_image">
-          <img src="/images/markers/laendshape.webp" />
-        </div>
-        <p>LÄND SHAPE</p>
-      </div>
-      <div
-        class="sticker_type thelaend_round"
-        onclick="chooseSticker('thelaend_round')"
-      >
-        <div class="sticker_type_image">
-          <img src="/images/markers/thelaend_round.webp" />
-        </div>
-        <p>THE LÄND</p>
-      </div>
-      <div
-        class="sticker_type netthier_laend"
-        onclick="chooseSticker('netthier_laend')"
-      >
-        <div class="sticker_type_image">
-          <img src="/images/markers/netthier_laend.webp" />
-        </div>
-        <p>LÄND EDITION - "Nett hier"</p>
-      </div>
-      <div
-        class="sticker_type notbad_laend"
-        onclick="chooseSticker('notbad_laend')"
-      >
-        <div class="sticker_type_image">
-          <img src="/images/markers/notbad_laend.webp" />
-        </div>
-        <p>LÄND EDITION - "Not bad"</p>
-      </div>
-    </main>
-    <div class="next_step_button" onclick="nextStep(1)">
+    <div id="map"></div>
+    <div class="next_step_button" onclick="nextStep(2)">
       <h1>Next step &rAarr;</h1>
     </div>
-    <script src="script.js"></script>
+
+    <script src="/leaflet.js"></script>
+    <script src="/map.js"></script>
     <script src="/analytics.js"></script>
+    <script src="script.js"></script>
+    <script src="step2.js"></script>
   </body>
 </html>

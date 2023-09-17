@@ -53,6 +53,15 @@ header {
 
 main {
     padding: 0.5rem;
+    background-color: var(--theme2-color);
+}
+
+#map {
+    grid-area: main;
+    display: grid;
+}
+
+#choose_sticker_type {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -62,7 +71,6 @@ main {
         "laendshape thelaend_round"
         "netthier_laend notbad_laend";
     grid-area: main;
-    background-color: var(--theme2-color);
 }
 
 .laendshape {
@@ -121,7 +129,8 @@ main {
 }
 
 @media screen and (min-width: 475px) {
-    main {
+
+    #choose_sticker_type {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:

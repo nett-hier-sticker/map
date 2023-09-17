@@ -18,5 +18,9 @@ function nextStep(i) {
         case 1:
             if (chosenSticker == null) alert("Please choose a sticker type");
             else location.assign("step2.html?sticker_type=" + chosenSticker);
+            break;
+        case 2:
+            if (!marker || marker == null) alert("Please choose a location");
+            else location.assign("step3.html?sticker_type=" + sticker_type + "&lat=" + marker.getLatLng().lat + "&lng=" + marker.getLatLng().lng);
     }
 }
