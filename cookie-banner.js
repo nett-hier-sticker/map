@@ -92,7 +92,7 @@ if (document.cookie.indexOf("mapProvider") != -1) {
             break;
         case "cartodb":
             mapProvider = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-            mapProviderAttribution = '<a href="https://carto.com/attributions">Carto</a>';
+            mapProviderAttribution = '<a href="https://carto.com/attributions">CartoDB</a>';
             break;
         case "usgs":
             mapProvider = "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}";
