@@ -34,6 +34,27 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
 
 <body>
   <main id="main">
+    <div class="cookie_notice" id="cookie_notice">
+      <div>
+        <h1>Hey, we are using 🍪!</h1>
+        <p>
+          By using this map you agree to our <a href="/legal/privacy_policy/" target="_blank">privacy policy</a>.
+        </p>
+        <p>
+          When clicking on "Accept tracking" or "No tracking" you use OpenStreetMap as map provider, so a connection to their servers is established. <br>
+          If you want to choose another map provider, click <span onclick="showMapProviderSelection()" style="cursor: pointer;text-decoration: underline;">here</span>.
+        </p>
+        <p>
+          When clicking on "Accept tracking" you also help us to improve our service by sending anonymous usage data to our servers. <br>
+          More information about this can be found in our <a href="/legal/privacy_policy/" target="_blank">privacy policy</a>.
+        </p>
+        <p>
+          When clicking any of the buttons below, we will create a cookie to remember your choice.
+        </p>
+        <button id="accept_all" onclick="chooseTracking('y');">Accept tracking and External Content</button>
+        <button id="no_tracking" onclick="chooseTracking('n');">No tracking, allow External Content</button>
+      </div>
+    </div>
     <div id="map"></div>
     <div id="action_pane">
       <div class="marker_info">
@@ -49,6 +70,7 @@ if ($stmt = $con->prepare("SELECT * FROM " . $settings["db"]["tables"]["markers"
   </main>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="map.js"></script>
+  <script src="cookie-banner.js"></script>
   <script src="script.js"></script>
   <script>
     <?php
